@@ -3,3 +3,13 @@
     display: flex;
     display: -webkit-flex;
 }
+
+/*筛子公用类样式*/
+
+.item {
+    display: block;
+    width:24px;
+    height: 24px;
+    border-radius: 50%;
+    background:#000000;
+}
