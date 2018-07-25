@@ -1,0 +1,42 @@
+一:安装
+1.全局安装ts
+安装typescript编译器，后面需要把typescript代码编译成浏览器能够识别的javascript代码
+npm install -g typescript
+
+
+2.安装tsd编译typescript代码命令工具
+npm install -g tsd
+
+3.安装angular2，es6-promiserx，rx，rx-lite
+tsd install angular2 es6-promise rx rx-lite
+
+4.Tpyings  
+命令:npm install -g typings  
+当typescript使用一个外部JavaScript库时,会需要这个文件，当然好多的编译器都用它来增加智能感知能力。
+
+5.安装 node 的 .d.ts 库
+命令:typings install -g dt~node 
+
+
+二. vsCode插件 
+1.typeScript Import
+专门处理TS内模块导入的：typeScript Import
+
+2.typeScript ToolBox
+
+3.Angular 2, 4 and upcoming latest TypeScript HTML Snippets
+代码片段插件：Angular 2, 4 and upcoming latest TypeScript HTML Snippets
+
+4.Latest TypeScript and Javascript Grammar
+语法：Latest TypeScript and Javascript Grammar  
+
+实时监控typescript文件,tsc把ts文件编译为js,检测到变化后执行自动编译
+tsc --watch -m commonjs -t es5 --emitDecoratorMetadata app.ts　　
+
+
+三.搭建
+1.npm init，创建package.json
+
+
+
+

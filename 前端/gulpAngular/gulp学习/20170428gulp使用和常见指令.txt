@@ -1,0 +1,135 @@
+一.安装
+npm install -g gulp
+cd 项目目录
+npm install --save-dev gulp
+
+npm install --save-dev gulp-util (gulp工具基本包)
+ 
+git客户端：是链接github上的包管理工具，通过Bower从git客户端下载包到项目。
+bower:包管理工具 (npm install -g bower，需先安装git客户端)
+(1)bower 项目初始化：在window的cmd中使用bower init初始化项目bower.json
+(2)bower 安装开发包: 在git Bash命令行中安装，例如：bower install angular#1.6.8
+webpack:文件打包工具（集成了bower）
+gulp：文件流构建工具（核心使用nodejs中stream）
+
+引入包：
+var gulp = require("gulp");
+
+二.常见指令
+1.gulp.src("")获取文件路径上的文件内容和信息
+
+2. gulp.dest("") 则把流中的内容写入到文件中,只能用来指定要生成的文件的目录
+var gulp = require('gulp');
+gulp.src('script/jquery.js')
+    .pipe(gulp.dest('dist/foo.js'));
+
+gulp.dest(path)生成的文件路径是我们传入的path参数后面再加上gulp.src()中有通配符开始出现的那部分路径
+gulp.src("script/a/b.js")
+   .pie(gulp.dest('dist'));  //生成路径为dist/b.js 。 dist代替script/a
+
+gulp.src("script/*/b.js")
+   .pie(gulp.dest('dist'));  //生成路径为dist/*/b.js  dist代替非通配符的首项
+
+
+gulp.src(script/lib/*.js, {base:'script'}) //配置了base参数，此时base路径为script
+    //假设匹配到的文件为script/lib/jquery.js
+    .pipe(gulp.dest('build')) //此时生成的文件路径为 build/lib/jquery.js
+
+
+3.gulp.task()定义任务
+gulp.task(name,[,deps],fuc)
+name: 任务名
+deps:是当前定义的任务需要依赖的其他任务，为一个数组。当前定义的任务会在所有依赖的任务执行完毕后才开始执行。如果没有依赖，则可省略这个参数
+fn 为任务函数，我们把任务要执行的代码都写在里面。该参数也是可选的。
+
+例如:
+gulp.task('mytask', ['array', 'of', 'task', 'names'], function() { //定义一个有依赖的任务
+  // Do something
+});
+
+应用一: 任务捆绑：
+//只要执行default任务，就相当于把one,two,three这三个任务执行了
+gulp.task('default',['one','two','three']);
+
+应用二:控制异步操作任务先后顺序
+（1）回调函数
+gulp.task('one',function(cb){ //cb为任务函数提供的回调，用来通知任务已经完成
+  //one是一个异步执行的任务
+  setTimeout(function(){
+    console.log('one is done');
+    cb();  //执行回调，表示这个异步任务已经完成
+  },5000);
+});
+//这时two任务会在one任务中的异步操作完成后再执行
+gulp.task('two',['one'],function(){
+  console.log('two is done');
+});
+（2）  promise
+var Q = require('q'); //一个著名的异步处理的库 https://github.com/kriskowal/q
+gulp.task('one',function(cb){
+  var deferred = Q.defer();
+  // 做一些异步操作
+  setTimeout(function() {
+     deferred.resolve();
+  }, 5000);
+  return deferred.promise;
+});
+
+gulp.task('two',['one'],function(){
+  console.log('two is done');
+});
+
+4.gulp.watch监听文件流变化
+gulp.watch('js/**/*.js', function(event){
+    console.log(event.type); //变化类型 added为新增,deleted为删除，changed为改变 
+    console.log(event.path); //变化的文件的路径
+}); 
+
+5.gulp.run,运行任务
+gulp.task('default', function() {
+ gulp.run(css-task);
+});
+
+
+6.gulp.pipe  管道操作，前一个输出是后一个的输入
+      gulp.src(options.css)
+          .pipe(browserSync.stream());
+
+三.常见插件使用
+（1）.gulp-load-plugins:自动加载插件,能自动帮你加载package.json文件里的gulp插件，不必一条条写require
+安装：npm install --save-dev gulp-load-plugins
+例如：
+然后我们可以在gulpfile.js中使用gulp-load-plugins来帮我们加载插件：
+var gulp = require('gulp');
+//加载gulp-load-plugins插件，并马上运行它
+var plugins = require('gulp-load-plugins')();
+然后我们要使用gulp-rename和gulp-ruby-sass这两个插件的时候，就可以使用plugins.rename和plugins.rubySass来代替了,也就是原始插件名去掉gulp-前缀，之后再转换为驼峰命名。
+实质上gulp-load-plugins是为我们做了如下的转换
+
+plugins.rename = require('gulp-rename');
+plugins.rubySass = require('gulp-ruby-sass');
+
+
+（2）.文件合并
+使用gulp-concat
+安装：npm install --save-dev gulp-concat
+用来把多个文件合并为一个文件,我们可以用它来合并js或css文件等，这样就能减少页面的http请求数了
+var gulp = require('gulp'),
+    concat = require("gulp-concat");
+ 
+gulp.task('concat', function () {
+    gulp.src('js/*.js')  //要合并的文件
+    .pipe(concat('all.js'))  // 合并匹配到的js文件并命名为 "all.js"
+    .pipe(gulp.dest('dist/js'));
+});
+
+
+（3）自动刷新
+使用gulp-livereload插件
+安装：npm install --save-dev gulp-livereload
+当代码变化时，它可以帮我们自动刷新页面
+该插件最好配合谷歌浏览器来使用，且要安装livereload chrome extension扩展插件,不能下载的请自行FQ。
+
+
+
+

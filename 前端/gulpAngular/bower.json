@@ -1,0 +1,24 @@
+{
+  "name": "pengyun",
+  "description": "gulpAngular",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.1.1",
+    "angular": "1.5.8",
+    "angular-ui-router": "^1.0.3"
+  },
+  "devDependencies": {
+    "angular": "1.5.8",
+    "jquery": "2.1.1",
+    "angular-ui-router": "^1.0.3"
+  }
+}

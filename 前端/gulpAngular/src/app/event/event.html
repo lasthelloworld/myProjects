@@ -1,0 +1,57 @@
+<div>{{vm.Name}}</div>
+<div ng-if="vm.IsLoad" >
+    <div style="border-bottom:1px solid #000000;" colid="{{vm.BLSJ_ZYH.Code}}">
+        住院号:(数据值,加载源):
+        <input  type="text" ng-attr-event-monitor="{{vm.BLSJ_ZYH.Code}}|Text" ng-model="vm.BLSJ_ZYH.DefaultVal">
+    </div>
+    <div style="border-bottom:1px solid #000000;" colid="{{vm.BLSJ_CYSJ.Code}}">
+        常用事件(级联事件,数据值事件):
+        <div ng-repeat="item in vm.BLSJ_CYSJ.Source">
+            <input  type="radio" name="vm.BJSJ_CYSJ.Code" ischecked="{{vm.BLSJ_CYSJ.DefaultVal==item.ID}}" ng-attr-event-monitor="{{vm.BLSJ_CYSJ.Code}}|RadioBox"  ng-model="vm.BLSJ_CYSJ.DefaultVal" value="{{item.ID}}" />
+            <label for="item.ID">{{item.Value}}{{vm.BLSJ_CYSJ.DefaultVal}}</label>
+        </div> 
+    </div>
+    <div style="border-bottom:1px solid #000000;" colid="{{vm.BLSJ_SJLX.Code}}">
+        事件类型(数据源事件):
+        <div ng-repeat="item in vm.BLSJ_SJLX.Source">
+            <input  type="radio" name="vm.BLSJ_SJLX.Code" ng-attr-event-monitor="{{vm.BLSJ_SJLX.Code}}|RadioBox" ng-model="vm.BLSJ_SJLX.DefaultVal" value="{{item.ID}}" />
+            <label for="item.ID">{{item.Value}}</label>
+        </div>
+    </div>
+    <div style="border-bottom:1px solid #000000;" colid="{{vm.BLSJ_SJMC.Code}}" >
+        事件名称(级联事件):
+        <div ng-repeat="item in vm.BLSJ_SJMC.Source">
+            <input  type="radio" name="vm.BLSJ_SJMC.Code" ng-attr-event-monitor="{{vm.BLSJ_SJMC.Code}}|RadioBox" ng-model="vm.BLSJ_SJMC.DefaultVal" value="{{item.ID}}" />
+            <label for="item.ID">{{item.Value}}</label>
+        </div>
+    </div>
+</div>
+
+
+<!--<div ng-if="vm.IsLoad" >
+    <div style="border-bottom:1px solid #000000;">
+        住院号:(数据值,加载源):
+        <input  type="text" ng-attr-event-monitor="{{vm.SubData[0].Code}}|Text" ng-model="vm.SubData[0].DefaultVal">
+    </div>
+    <div style="border-bottom:1px solid #000000;">
+        常用事件(级联事件,数据值事件):
+        <div ng-repeat="item in vm.SubData[14].Source">
+            <input type="radio" name="item.ID" ng-attr-event-monitor="{{vm.SubData[14].Code}}|RadioBox" ng-model="vm.SubData[14].DefaultVal" value="{{item.ID}}" />
+            <label for="item.ID">{{item.Value}}{{vm.SubData[14].DefaultVal}}</label>
+        </div> 
+    </div>
+    <div style="border-bottom:1px solid #000000;">
+        事件类型(数据源事件):
+        <div ng-repeat="item in vm.SubData[15].Source">
+            <input type="radio" name="item.ID" ng-attr-event-monitor="{{vm.SubData[15].Code}}|RadioBox" ng-model="vm.SubData[15].DefaultVal" value="{{item.ID}}" />
+            <label for="item.ID">{{item.Value}}</label>
+        </div>
+    </div>
+    <div style="border-bottom:1px solid #000000;">
+        事件名称(级联事件):
+        <div ng-repeat="item in vm.SubData[16].Source">
+            <input type="radio" name="item.ID" ng-attr-event-monitor="{{vm.SubData[16].Code}}|RadioBox" ng-model="vm.SubData[16].DefaultVal" value="{{item.ID}}" />
+            <label for="item.ID">{{item.Value}}</label>
+        </div>
+    </div>
+</div>-->

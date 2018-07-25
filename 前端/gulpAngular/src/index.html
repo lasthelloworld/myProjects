@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <title>单元测试</title>
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/angular/angular-csp.css">
+    <!-- endinject -->
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/pageA.css">
+    <link rel="stylesheet" href="css/pageB.css">
+    <!-- endinject -->
+</head>
+<body>
+<div ui-view></div>
+<!-- bower:js -->
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<!-- endinject -->
+
+<!-- module:js -->
+<script src="app/event/event.module.js"></script>
+<script src="app/home/home.module.js"></script>
+<script src="app/main/main.module.js"></script>
+<script src="app/nmsTest/nmsTest.module.js"></script>
+<script src="app/tools/tool.module.js"></script>
+<!-- endinject -->
+
+<!-- other:js -->
+<script src="app/event/event.controller.js"></script>
+<script src="app/home/home.controller.js"></script>
+<script src="app/main/main.controller.js"></script>
+<script src="app/nmsTest/buidlScope.js"></script>
+<script src="app/nmsTest/nmsTest.controller.js"></script>
+<script src="app/tools/appService.js"></script>
+<script src="app/tools/dataService.js"></script>
+<script src="app/tools/test.directive.js"></script>
+<script src="app/nmsTest/controlHelper/bindModel.service.js"></script>
+<script src="app/nmsTest/controlHelper/controlModel.service.js"></script>
+<script src="app/nmsTest/controlHelper/controlOfMtcCommon.service.js"></script>
+<script src="app/nmsTest/controlHelper/controlValue.service.js"></script>
+<script src="app/tools/Event/eventAction.service.js"></script>
+<script src="app/tools/Event/eventConfig.service.js"></script>
+<script src="app/tools/Event/eventHelper.service.js"></script>
+<script src="app/tools/Event/eventMonitor.directive.js"></script>
+<script src="app/tools/Event/eventQueue.service.js"></script>
+<script src="app/tools/Event/eventSchedule.service.js"></script>
+<script src="app/tools/Event/eventViewAction.service.js"></script>
+<script src="app/tools/common/finishRender.directive.js"></script>
+<!-- endinject -->
+
+
+<!-- app:js -->
+<script src="js/app.module.js"></script>
+<!-- endinject -->
+
+<!-- route:js -->
+<script src="js/app.route.js"></script>
+<!-- endinject -->
+
+<!--通过inject加载js时，需依次加载angular,插件js，module,其他（控制器、指令、服务等）、app启动模块、app路由-->
+</body>
+</html>

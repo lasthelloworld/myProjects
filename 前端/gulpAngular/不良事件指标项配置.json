@@ -1,0 +1,253 @@
+{
+	"Flag": 1,
+	"Msg": "",
+	"Output": {
+		"Data": {
+			"ID": "06269ac5-9181-4c6c-a10d-bb8e8c11d5ef",
+			"MCID": "0b0b976d-9b3a-4600-9fb8-681059302d0c",
+			"Struct": {
+				"ShowBtn": ["查询",
+				"新增",
+				"编辑",
+				"删除",
+				"浏览",
+				"导出",
+				"打印",
+				"提交"],
+				"Condition": [{
+					"MICode": ["SMR_FillInDate"],
+					"Name": "填写日期",
+					"DefaultVal": "",
+					"ControlType": "DateTime",
+					"Operation": "scope",
+					"OperationVType": "InPut",
+					"NO": 1,
+					"ConditionType": 1,
+					"Source": null
+				}],
+				"ShowCol": [{
+					"ColType": 0,
+					"Col": ["BLSJ_ZYH",
+					"BLSJ_XNAME",
+					"BLSJ_ZD",
+					"BLSJ_SJLX",
+					"BLSJ_SJMC",
+					"BLSJ_ZC_HZZT_FSQ",
+					"BLSJ_YW_YWHSMTZ"]
+				}],
+				"MetricsClass": [{
+					"ID": "08344ebb-4298-45cd-8593-a5f355c2cf98",
+					"ParentID": "ROOT",
+					"treeLevel": 0,
+					"ClassName": "基本信息",
+					"MItem": ["BLSJ_ZYH",
+					"BLSJ_XNAME",
+					"BLSJ_NL",
+					"BLSJ_XB",
+					"BLSJ_BIRTH",
+					"BLSJ_SFZ",
+					"BLSJ_ZY",
+					"BLSJ_LXFS",
+					"BLSJ_RYRQ",
+					"BLSJ_HLDJ",
+					"BLSJ_CH",
+					"BLSJ_ZD"]
+				},
+				{
+					"ID": "c627c91e-22f7-4054-8f89-a862f74ae7a1",
+					"ParentID": "ROOT",
+					"treeLevel": 0,
+					"ClassName": "事件信息",
+					"MItem": ["BLSJ_YW_YWYY",
+					"BLSJ_YW_SSRK",
+					"BLSJ_YW_SSRK_SQMS",
+					"BLSJ_YW_YWHHZQK",
+					"BLSJ_YW_YWHSMTZ",
+					"BLSJ_YW_YWHQTPG",
+					"BLSJ_YW_TZYSSJ",
+					"BLSJ_YW_ZLYZ",
+					"BLSJ_YW_HLCS",
+					"BLSJ_YW_JCJG",
+					"BLSJ_YW_SFTZJS",
+					"BLSJ_YW_ZLDDQK_TW",
+					"BLSJ_YW_ZLDDQK_SZQK",
+					"BLSJ_YW_ZYQYWZLS",
+					"BLSJ_DG_FSHLRQ",
+					"BLSJ_DG_ZGRQ",
+					"BLSJ_DG_SSRQ",
+					"BLSJ_DG_HZSTZK",
+					"BLSJ_DG_STZK_HLJB",
+					"BLSJ_DG_STZK_YSZT",
+					"BLSJ_DG_STZK_HDNL",
+					"BLSJ_DG_XGYS",
+					"BLSJ_DG_XGYS_JKXJ",
+					"BLSJ_ZC_HZZT",
+					"BJSJ_DG_XGYS_YSDSY",
+					"BLSJ_DG_XGYS_GZRY",
+					"BLSJ_DG_XGYS_QT",
+					"BLSJ_DG_BFZ",
+					"BLSJ_DG_DGLX",
+					"BLSJ_YW_SJMJ",
+					"BLSJBZ-YC-CMQK",
+					"BLSJBZ-YC-SCY",
+					"BLSJBZ-YC-YS",
+					"BLSJBZ-YC-QW",
+					"BLSJBZ-YC-L",
+					"BLSJ_ZC_DDDD",
+					"BLSJ_DG_STZK_ZWZKNL",
+					"BLSJBZ-YC-SKGR",
+					"BLSJBZ-YC-ZZHS",
+					"BLSJBZ-YC-CLCC",
+					"BLSJ_ZC_DDSJ",
+					"BLSJ_YW_ZLDDQK",
+					"BLSJ_YW_YWSHSBQHD",
+					"BLSJ_DG_STZK_JSZT",
+					"BLSJ_YW_ZLDDQK_CL",
+					"BLSJ_DG_TGYY",
+					"BLSJ_TY_FSFW",
+					"BLSJ_TY_SHZCBLHG",
+					"BLSJ_TY_SQJG",
+					"BLSJ_TY_YYFX",
+					"BLSJ_TY_ZGCS",
+					"BLSJ_TY_FSRQ",
+					"BLSJ_TY_FSDD",
+					"BLSJ_YC_HZZT",
+					"BLSJBZ-YC-QX",
+					"BJSJ_YW_YWFSDD",
+					"BLSJ_ZC_MORSEBPF",
+					"BLSJ__YC_BW",
+					"BLSJ_YC_MJJ",
+					"BLSJ_YC_SDD",
+					"BLSJ_CYSJ",
+					"BLSJ_ZC_DDPR",
+					"BLSJ_YC_PF",
+					"BLSJ_ZC_DDSMTZ_BP",
+					"BLSJ_YC_LY",
+					"BLSJ_YC_PGGGG",
+					"BLSJ_SJDJ",
+					"BLSJ_ZCDHG",
+					"BLSJ_YC_ZKK",
+					"BLSJ_ZC_HZZT_FSQ",
+					"BLSJ_ZC_HZZT_FSH",
+					"BLSJ_ZC_DDSHZZT",
+					"BLSJ_SJMC",
+					"BLSJ_ZC_DDSMTZ",
+					"BLSJ_ZC_DDSMTZ_T",
+					"BLSJ_ZC_DDSMTZ_P",
+					"BLSJ_ZC_DDSMTZ_R",
+					"BLSJ_ZC_SJJG",
+					"BLSJ_ZC_CQCS",
+					"BLSJ_ZC_DDYY",
+					"BLSJ_ZC_DDHCL",
+					"BLSJ_DG_GDFF",
+					"BLSJ_DG_CL",
+					"BLSJ_ZC_DDSSBW",
+					"BLSJ_SJLX",
+					"BLSJBZ-YC-FQ",
+					"SMR_NursingUnit"]
+				},
+				{
+					"ID": "4448db8d-be20-4926-8791-a3349642d2b8",
+					"ParentID": "ROOT",
+					"treeLevel": 0,
+					"ClassName": "人员信息",
+					"MItem": ["BLSJ_DSR2",
+					"BLSJ_ZC",
+					"BLSJ_RYXX_GZNX",
+					"BLSJ_RYXX_FXR",
+					"BLSJ_RYXX_BGR",
+					"BLSJ_RYXX_BGRQ",
+					"SMR_FillInPerson",
+					"SMR_FillInDate"]
+				}],
+				"Event": {
+					"EventItem": [{
+						"EventType": "SJYDZ",
+						"MetricsItem": [{
+							"MetricsItemCode": "BLSJ_SJLX",
+							"OtherSource": "fd20cbe0-dc31-454c-9bb3-35f2c97c10be"
+						},
+						{
+							"MetricsItemCode": "SMR_NursingUnit",
+							"OtherSource": "1d59cc89-86a0-4fce-b8dc-ba361614d945",
+							"ParamMCodes": []
+						}]
+					},
+					{
+						"EventType": "JLDZ",
+						"MetricsItem": [{
+							"MetricsItemCode": "BLSJ_SJMC",//触发级联事件的源ID：（1）与Row,Col中的Code比较
+							"ChooseItem": [{
+								"ChooseItemID": "210",//（2）在找到的Row,Col中Source[k].ID 与ChooseItemID比较，若相等，说明点击Row,Col中Source[k].ID，显示ChooseItemID下对应的Source指标项
+								"Source": ["BLSJ_ZC_HZZT",  
+								"BLSJ_ZC_DDDD",
+								"BLSJ_ZC_DDSJ",
+								"BLSJ_ZC_MORSEBPF",
+								"BLSJ_ZC_HZZT_FSQ",
+								"BLSJ_ZC_HZZT_FSH",
+								"BLSJ_ZC_DDSHZZT",
+								"BLSJ_ZC_DDPR",
+								"BLSJ_ZC_DDSMTZ",
+								"BLSJ_ZC_DDSMTZ_T",
+								"BLSJ_ZC_DDSMTZ_P",
+								"BLSJ_ZC_DDSMTZ_R",
+								"BLSJ_ZC_DDSMTZ_BP",
+								"BLSJ_ZC_SJJG",
+								"BLSJ_ZC_CQCS",
+								"BLSJ_ZC_DDYY",
+								"BLSJ_ZC_DDHCL",
+								"BLSJ_ZC_DDSSBW"]
+							}]
+						},
+						{
+							"MetricsItemCode": "BLSJ_CYSJ",
+							"ChooseItem": [{
+								"ChooseItemID": "-10000",
+								"Source": ["BLSJ_SJMC",
+								"BLSJ_SJLX"]
+							},
+							{
+								"ChooseItemID": "-10001",
+								"Source": ["BLSJ_SJMC",
+								"BLSJ_SJLX"]
+							}]
+						}]
+					},
+					{
+						"EventType": "SJZDZ",
+						"MetricsItem": [{
+							"MetricsItemCode": "BLSJ_CYSJ",
+							"OtherSource": "42f28709-0015-4bfa-bc52-bcbabaf799ac"
+						},
+						{
+							"MetricsItemCode": "BLSJ_ZYH",
+							"OtherSource": "534646a6-3cfe-4ffa-9c8f-afecb08235ad"
+						}]
+					},
+					{
+						"EventType": "JZYDZ",
+						"MetricsItem": [{
+							"MetricsItemCode": "BLSJ_XNAME",
+							"OtherSource": "42264213-c0c9-441a-8562-91462113a9d8",
+							"ParamMCodes": []
+						},
+						{
+							"MetricsItemCode": "BLSJ_ZYH",
+							"OtherSource": "534646a6-3cfe-4ffa-9c8f-afecb08235ad"
+						}]
+					}]
+				},
+				"OtherConfig": {
+					"MIDataWithOut": [],
+					"MIDataAggregate": [],
+					"MIDataHide": []
+				}
+			},
+			"CSS": "{\"Form\":{\"FormType\":\"Normal\",\"InputCtrlShowType\":\"NewLine\",\"FormWidth\":\"70%\",\"FormHeight\":\"\",
+			\"TemplateUrl\":\"\",
+			\"RowColCount\":4,\"OtherStyle\":\".modal-body .form .form-group label{font-size:12px;}.form-control{display: initial;height: 25px;}.form-group select{height: 25px;}\"}}",
+			"MCTID": "47865c66-fa94-46eb-a117-c3259554014c",
+			"ExtContent": "{\"MetricsTaskConfig\":{\"TaskName\":\"NMS_AdverseEventReporting\",\"ReasonCode\":\"\",
+			\"ProcessID\":\"3541be81d7104733a3d3d85e014b24fa\"},\"Print\":{\"IsUsePubPrint\":false},\"OtherConfigOfOther\":{\"ReasonCode\":\"\"
+		}
+	}"}}}

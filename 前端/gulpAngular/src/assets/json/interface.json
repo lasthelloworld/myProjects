@@ -1,0 +1,15 @@
+{
+    "Server":{
+        "BASEPROTOCOL":"http",
+        "URL":"192.168.4.19",
+        "PORT":"8081",
+        "Route":""
+    },
+    "FUN":{
+        "Login":{"url":"/sys/login","method":"post","headers":{"Content-type":"application/json","charset":"utf-8","Authorization": "Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW"}},
+        "GetSJZEventData":{"url":"/nms/MetricsItem/GetSJZEventData","method":"post","headers":{"Content-type":"application/json"}},
+        "GetSJYEventData":{"url":"/nms/MetricsItem/GetSJYEventData","method":"post","headers":{"Content-type":"application/json"}},
+        "GetJZYEventData":{"url":"/nms/MetricsItem/GetJZYEventData","method":"post","headers":{"Content-type":"application/json"}},
+        "GetInitEventData":{"url":"/nms/MetricsItem/GetInitEventData","method":"post","headers":{"Content-type":"application/json"}}
+    }
+}

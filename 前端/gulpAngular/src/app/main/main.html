@@ -1,0 +1,30 @@
+<div>
+    <div>我是main</div>
+
+    <h4>angularjs 双向绑定例子A--（非ng指令、ng事件）并不会进入$digest轮询更改view</h4>
+    <div>姓名:{{vm.SubData.Name}}</div>
+    <div>姓名:<input id="name" type="text" ng-model="vm.SubData.Name" /></div>
+    <div>姓名单方向绑定:<input id="name" type="text" value="{{vm.SubData.Name}}" /></div>
+    <h4>angularjs 双向绑定例子B--对于大对象监听使用$watchCollection</h4>
+    <div>
+        {{vm.SubData.SelectSex.ID}}
+        <select ng-model="vm.SubData.SelectSex" ng-options="item.Name for item in vm.SexList">
+    </select>
+    </div>
+    <h4>angularjs 双向绑定列子C--使用scope.$apply手动实现双向绑定</h4>
+    <div>年龄:{{vm.SubData.Age}}</div>
+    <div><button id="addAge1" type="button">增加年龄（没改变视图）</div>
+    <div><button id="addAge2" type="button">增加年龄（$apply改变视图）</div>
+    <div><button id="addAge3" type="button">禁止$digset轮询，增加年龄（$digset改变视图）</div>
+    <div><button id="addAge4" type="button">重新启用$digset轮询后，增加年龄（$digset改变视图）</div>
+    <div ng-if="vm.SubData.Age>18">年龄大于18岁显示</div>
+
+
+
+    <h4>angularjs 双向绑定列子D--使用单项绑定，手动实现双向绑定</h4>
+
+
+    <test ng-attr-template-key="{{vm.templateKey}}"></test>
+
+
+</div>

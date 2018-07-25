@@ -1,0 +1,47 @@
+清单 1. 全局安装 gulp
+npm install –g gulp
+清单 1.1 全局安装 bower
+npm install -g bower
+清单 2. 本地安装 gulp
+npm install --save-dev gulp
+清单 3. 本地安装 bower中的jquery 和angularjs(若报错请用git Bash命令行工具)
+bower init (初始化bower.json文件)
+bower install --save-dev jquery angular
+bower install --save-dev angular#1.6.8 
+清单 3.1 安装jquery包
+bower install --save-dev jquery#2.1.1
+清单 4. 安装样式压缩
+npm install --save-dev gulp-cssmin
+清单 5. 编译javascript,检查js语法错误 ?? reporter没找到
+npm install --save-dev gulp-jshint
+清单 6. 安装js混淆gulp-uglify及gulp-sourcemaps
+npm install --save-dev gulp-uglify
+npm install --save-dev gulp-sourcemaps
+清单 6. 安装代码修改自动刷新
+npm install --save-dev gulp-livereload
+清单 7. 安装文件合并
+npm install --save-dev gulp-concat
+清单 8. 自动加载插件,能自动帮你加载package.json文件里的gulp插件，不必一条条写require
+npm install --save-dev gulp-load-plugins
+清单 9. 删除文件和文件夹
+npm install --save-dev gulp del
+清单 10   加载angular的template模板，组装到一个moudle
+npm install --save-dev gulp-angular-templatecache
+清单 11  inject方式载入静态文件到index.html中
+npm install --save-dev gulp-inject
+清单 12 wiredep插件把 bower.json 里所有签到过的插件全部都注入到指定的文件里（index.html）,应用与注入特定插件
+npm install --save-dev wiredep
+(
+bower.json:
+  "dependencies": {
+    "jquery": "2.1.1",
+    "angular": "1.5.8"
+  }//对应标签载入
+)
+清单 13. his用inject方式载入bower安装包中的插件js、css
+npm install --save-dev main-bower-files（调用bowerFiles方法）
+清单 14. 安装browser-sync
+npm install -g browser-sync
+npm install --save-dev browser-sync
+清单 15.安装angularjs 路由
+bower install --save angular-ui-router
