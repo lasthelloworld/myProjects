@@ -1,0 +1,5 @@
+/*定义容器*/
+.box {
+    display: flex;
+    display: -webkit-flex;
+}

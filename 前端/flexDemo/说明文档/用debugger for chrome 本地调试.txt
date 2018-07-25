@@ -1,0 +1,45 @@
+先安装debugger for chrome
+F5 选择chrome
+编辑如下launch.json文件
+F5 选择 "使用本机Chrome调试"调试
+PS：这种方法只适合普通页面，要是你的js项目里，包含json等游览器不支持本地游览的资源，那么就需要开启服务器，配合这个插件，才能进行断点调试。
+
+
+${workspaceRoot} VS Code当前打开的文件夹
+
+${file} 当前打开的文件
+
+${relativeFile} 相对于workspaceRoot的相对路径
+
+${fileBasename} 当前打开文件的文件名
+
+${fileDirname} 所在的文件夹，是绝对路径
+
+${fileExtname} 当前打开文件的拓展名，如.json
+
+
+launch.json
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "使用本机Chrome调试",
+            "file": "${workspaceRoot}/index.html",
+            //"url": "http://localhost:8080",//使用外部服务器时,请注释掉 file, 改用 url,并将 useBuildInServer 设置为 fals
+            "webRoot": "${workspaceRoot}",
+            "runtimeExecutable":"C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
+            "sourceMaps": true,
+             //  "preLaunchTask":"build",
+             "userDataDir":"${tmpdir}",
+             "port":5433
+        }
+    ]
+}
+
+
+
+
