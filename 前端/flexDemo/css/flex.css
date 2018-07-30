@@ -22,8 +22,8 @@
 /*筛子公用类样式*/
 .item {
     display: block;
-    width:24px;
-    height: 24px;
+    width:30px;
+    height: 30px;
     border-radius: 50%;
     background:#000000;
     color: #e0e0e0;
@@ -41,13 +41,25 @@
 
 
 .two {
-    justify-content: space-between;
+   justify-content: space-between;
 }
     
-}
 .two .item:nth-child(2){
+        align-self: flex-end;
+}
+
+
+.three {
+     justify-content: space-between;
+}
+.three .item:nth-child(2){
     align-self: center;
+}
+.three .item:nth-child(3){
     align-self: flex-end;
 }
+
+
+
 
 
