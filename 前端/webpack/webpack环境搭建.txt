@@ -1,0 +1,40 @@
+
+目前是8.9.4最好，nodejs的正式版本都是偶数2,4,6,8这样命名，测试版奇数1,3,5,7,9。8.9.4是最新稳定版。
+
+在root根目录运行命令
+npm init
+
+全局安装
+npm install webpack -g
+
+项目当前目录安装
+npm install webpack --save-dev
+
+注意：
+（1）webpack4x以上需全局安装webpack.cli
+npm install webpack-cli -g
+（2）webpack4x不再支持node v4，需nodejs v4以上版本，建议6.9.0.
+
+src文件目录下创建entry入口文件entry.js
+
+
+在root根目录下创建配置文件webpack.config.js
+
+
+几个常用概念：
+__dirname:指向被执行 js 文件的绝对路径
+
+
+安装loader：打包css和图片文件
+首先在项目内安装样式的loader
+ npm install css-loader style-loader --save-dev
+ npm install file-loader url-loader --save-dev
+说明：
+css-loader：打包，加载CSS模块，但无法渲染到页面
+style-loader:渲染到页面中，但不能打包CSS
+url-loader：打包图片，小于8KB以base64编码的形式打包在js中，减少请求的发送
+
+url-loader是对象file-loader的上层封装，使用时需配合file-loader使用。 
+
+
+
