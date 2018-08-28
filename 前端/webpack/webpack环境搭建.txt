@@ -15,7 +15,7 @@ npm install webpack --save-dev
 npm install webpack-cli -g
 （2）webpack4x不再支持node v4，需nodejs v4以上版本，建议6.9.0.
 
-src文件目录下创建entry入口文件entry.js
+src文件目录下js创建入口文件index.js
 
 
 在root根目录下创建配置文件webpack.config.js
@@ -23,6 +23,7 @@ src文件目录下创建entry入口文件entry.js
 
 几个常用概念：
 __dirname:指向被执行 js 文件的绝对路径
+./:当前路径的绝对路径
 
 
 安装loader：打包css和图片文件
@@ -36,5 +37,7 @@ url-loader：打包图片，小于8KB以base64编码的形式打包在js中，减少请求的发送
 
 url-loader是对象file-loader的上层封装，使用时需配合file-loader使用。 
 
+安装打包html插件
+npm install html-webpack-plugin --save-dev
 
 
